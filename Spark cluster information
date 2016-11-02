@@ -1,0 +1,41 @@
+Spark  Cluster:-
+•	How to start a cluster
+Go to Amazon Web Console and click on EMR -> Create Cluster. Specify the properties that you need and click Create Cluster.
+                                                            OR
+If aws is installed on your system, you can start it through command line by the following command:-
+--- aws emr create-cluster --name "Spark_cluster" --release-label emr-4.7.0 --instance-type c3.xlarge --instance-count 1 --use-default-roles --ec2-attributes KeyName=aws_spark --applications Name=Spark
+
+
+Where……
+
+emr- Elastic Map Reduce
+release label- version which you need to install
+instance-type- basically a hardware configuration based on application requirement. 
+instance-count- Master and slave instances.
+***applicationsName- applications which you need to need to install
+
+
+
+•	Spark-submit command:-
+Spark-submit --class class_name --master local /home/hadoop/jar_file
+
+
+
+If you need to connect your application with MySql or Couchbase, you have to provide the package name as follows:- 
+--packages com.couchbase.client:spark-connector_2.11:1.2.1       // for couchbase connectivity.
+--packages mysql:mysql-connector-java:5.1.6                      // for MySql connectivity.
+
+Important :- Connecting to couchbase with spark Application.
+Note:- If you need to connect your application with couchbase, then provide the package of spark connector as follows:-
+--package com.couchbase.client:spark-connector_2.11:1.2.1
+
+Include the following dependency in pom.xml :-
+<dependency>
+    <groupId>com.couchbase.client</groupId>
+    <artifactId>spark-connector_2.11</artifactId>
+    <version>1.2.1</version>
+</dependency>
+Then include this package in spark-submit command while running as:-
+
+Spark-submit --class class_name --packages com.couchbase.client:spark-connector_2.11:1.2.1 --master local /home/hadoop/jar_file
+
