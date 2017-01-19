@@ -3,3 +3,15 @@
 Install xammp (Cross platform Apache MySql and PHP ) server.
 Start the MySQL and apache server in it.
 Go to C -> xammp -> htdocs -> Make your separate folder -> keep your files here. 
+
+
+
+
+// installing python :-
+Download anaconda from the follwing URL :- 
+https://www.continuum.io/downloads 
+Avaialable for windows/Ubuntu/Mac
+
+It contains python with jupyter Notebook.
+After installation,start jupyter notebook. and once the kernel started: access it on (http://localhost:8888/tree)
+
