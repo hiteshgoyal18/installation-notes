@@ -1,0 +1,12 @@
+for using inspect element with chrome in mobile with windows 7:-
+
+Download google win_usb driver from the follwoing url :-
+https://developer.android.com/studio/run/win-usb.html
+
+connect your android device to your development machine. Go to computer-> Properties -> Device Manager
+your device will be shown here.
+Right click on it followed by Update Driver Software --> Browse Mycomputer for driver software --> Let me pick from a list of device drivers on my computer
+. Then browse to the path where you have placed the win_usb file. 
+
+Select ADBInterface and press next. Press Yes. Your device driver would be installed properly.
+
