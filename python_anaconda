@@ -1,0 +1,10 @@
+to change default environment of python in anaconda.
+
+
+conda update conda
+conda update --all python=3.5
+
+
+to create multiple python environments in anaconda:-
+
+conda create python=3.5.0
