@@ -4,7 +4,11 @@ to change default environment of python in anaconda.
 conda update conda
 conda update --all python=3.5
 
+for more information refer to following link:- 
+http://stackoverflow.com/questions/28436769/how-to-change-default-anaconda-python-environment 
 
 to create multiple python environments in anaconda:-
 
 conda create python=3.5.0
+
+
