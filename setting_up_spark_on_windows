@@ -1,0 +1,12 @@
+Install JAVA (higher version than 1.7) and set the path environmental varibale :- 
+C:\Program Files\Java\jdk1.8.0_121\bin\
+
+Download spark from following :- 
+http://spark.apache.org/downloads.html
+
+set up PATH environmental variable by specifying path up tp bin folder like:- D:\spark-2.0.0-bin-hadoop2.7\bin
+
+it needs winutils.exe file to run. for this download hadoop bin master from 
+http://hadoop.apache.org/
+
+create a new environmental variable named HADOOP_HOME variable and specify path up tp main folder like :- D:\hadoop-common-2.6.0-bin-master\
