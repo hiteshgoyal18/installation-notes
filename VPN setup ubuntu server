@@ -1,0 +1,28 @@
+1. login and reboot
+2. again login
+3. installimage
+4. Select old images
+5. Select ubuntu version (trusty 14.04)
+6. change hostname if you wish to
+
+7. Again reboot
+8. Login Again
+
+9. check ufw status (should be inactive)
+10. Enable ufw status (ufw enable)
+11. Add rules to ufw to make it accessible from specific ip and open specific ports related to communication 
+	ufw allow 80
+	ufw allow from "ip" to any port "port no."
+
+	(ufw allow from 0.0.0.0 to any port 22
+	ufw allow from 0.0.0.0 to any port 4040:4099 proto tcp/udp - to provide range of ports over tcp or udp)
+
+	allow from port 22 is necessary- to login
+
+12. vim /etc/network/interfaces     
+	add the following:- 
+		iface eth1 inet static
+		  address 192.168.0.101
+		  subnet 192.168.0.255
+		  netmast 255.255.255.0
+13. add ssh key based access.
